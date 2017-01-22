@@ -1,0 +1,7 @@
+[package]
+name = "GolfMania"
+version = "0.1.0"
+authors = ["Andrew Sansom <andrewsansomwork@gmail.com>"]
+
+[dependencies]
+GolfManiaLib = { git = "https://github.com/Andrew-College/GolfMania-RustLib.git" }
