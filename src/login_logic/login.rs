@@ -51,12 +51,18 @@ impl login {
         Err("No login available")
     }
 }
+
 #[cfg(test)]
 mod tests {
     use super::login;
 
     #[test]
-    fn it_works() {
+    fn valid_login() {
+        assert!(login::validate("Student".to_string(), "1".to_string()));
+    }
+
+    #[test]
+    fn invalid_login() {
         assert!(!login::validate("".to_string(), "".to_string()));
     }
 }
