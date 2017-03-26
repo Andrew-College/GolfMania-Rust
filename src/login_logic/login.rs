@@ -1,12 +1,12 @@
-const logins: &'static str = include_str!("login.skrt");
+const LOGINS: &'static str = include_str!("login.skrt");
 
 #[derive(Debug)]
-struct login {
+struct Login {
     _name: String,
     _password: String,
 }
 
-impl login {
+impl Login {
     pub fn name(&self) -> &String {
         &self._name
     }
@@ -16,16 +16,16 @@ impl login {
     }
 
     pub fn validate(name: String, password: String) -> bool {
-        match login::check_logins(name, password) {
+        match Login::check_logins(name, password) {
             Ok(_) => true,
             _ => false
         }
     }
 
-    fn check_logins(name: String, password: String) -> Result<login, &'static str> {
+    fn check_logins(name: String, password: String) -> Result<Login, &'static str> {
         
-        let login_input: Vec<login> =
-            logins
+        let login_input: Vec<Login> =
+            LOGINS
                 .lines()
                 .map(
                     |input| {
@@ -34,7 +34,7 @@ impl login {
                                 .split(".")
                                 .collect();
                         
-                        login {
+                        Login {
                             _name: data[0].to_string(),
                             _password: data[1].to_string(),
                         }
@@ -54,15 +54,15 @@ impl login {
 
 #[cfg(test)]
 mod tests {
-    use super::login;
+    use super::Login;
 
     #[test]
     fn valid_login() {
-        assert!(login::validate("Student".to_string(), "1".to_string()));
+        assert!(Login::validate("Student".to_string(), "1".to_string()));
     }
 
     #[test]
     fn invalid_login() {
-        assert!(!login::validate("".to_string(), "".to_string()));
+        assert!(!Login::validate("".to_string(), "".to_string()));
     }
 }

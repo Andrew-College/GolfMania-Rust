@@ -1,13 +1,14 @@
-extern crate GolfManiaLib;
+extern crate GolfManiaLib as glib;
 
+mod view;
 mod login_logic;
 
-use GolfManiaLib::Model::{score_card, map};
-
-use login_logic::login;
+use glib::model::{score_card, map};
+use glib::model::map::*;
+use view::console;
 
 fn main() {
-    let new_score = map::Map::from_named(None);
-
-    println!("{:?}", new_score.board().first().unwrap().first());
+    let new_score = MapBuilder::from_named(None);
+    
+    println!("{:?}", new_score.unwrap().board().first().unwrap().first());
 }
