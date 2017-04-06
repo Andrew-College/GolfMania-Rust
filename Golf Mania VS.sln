@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{78C9907C-C22D-4F8D-B13A-49F213FF1631}") = "Golf Mania VS", "Golf Mania VS\Golf Mania VS.rsproj", "{7FF11417-DF73-436C-BFB4-D3CAB492CDEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|default = Debug|default
+		Release|default = Release|default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FF11417-DF73-436C-BFB4-D3CAB492CDEB}.Debug|default.ActiveCfg = Debug|default
+		{7FF11417-DF73-436C-BFB4-D3CAB492CDEB}.Debug|default.Build.0 = Debug|default
+		{7FF11417-DF73-436C-BFB4-D3CAB492CDEB}.Release|default.ActiveCfg = Release|default
+		{7FF11417-DF73-436C-BFB4-D3CAB492CDEB}.Release|default.Build.0 = Release|default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
