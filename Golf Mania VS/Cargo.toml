@@ -4,8 +4,7 @@ version = "0.1.0"
 authors = ["Andrew Sansom <andrewsansomwork@gmail.com>"]
 
 [[bin]]
-name = "Golf Mania VS"
-path = "Golf Mania VS\\src"
+path = "Golf Mania VS/src"
 
 [dependencies]
 GolfManiaLib = { git = "https://github.com/Andrew-College/GolfMania-RustLib.git" }

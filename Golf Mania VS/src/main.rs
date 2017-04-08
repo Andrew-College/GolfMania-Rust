@@ -1,10 +1,10 @@
-extern crate GolfManiaLib;
+extern crate GolfManiaLib as glib;
 
 mod view;
 mod login_logic;
 
-use GolfManiaLib::model::{score_card};
-use GolfManiaLib::model::map::*;
+use glib::model::{score_card};
+use glib::model::map::*;
 use view::console;
 
 fn main() {
